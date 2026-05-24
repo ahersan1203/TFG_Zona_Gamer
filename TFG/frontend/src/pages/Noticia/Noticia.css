@@ -1,0 +1,148 @@
+.noticias-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.noticias-container h1 {
+    text-align: center;
+    color: #111827;
+    margin-bottom: 20px;
+}
+
+.noticias-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.noticias-create-btn {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.noticias-create-btn:hover {
+    background: #1e4fd6;
+}
+
+.noticias-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.noticias-filter select {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+}
+
+.noticias-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.noticia-card {
+    background: white;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.noticia-title {
+    margin: 0 0 10px 0;
+    color: #111827;
+    font-size: 18px;
+}
+
+.noticia-title a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.noticia-title a:hover {
+    text-decoration: underline;
+}
+
+.noticia-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.noticia-meta {
+    font-size: 14px;
+    color: #374151;
+    margin: 4px 0;
+}
+
+.noticia-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.noticia-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.noticia-edit {
+    background: #2563eb;
+    color: white;
+}
+
+.noticia-edit:hover {
+    background: #1e4fd6;
+}
+
+.noticia-delete {
+    background: #dc2626;
+    color: white;
+}
+
+.noticia-delete:hover {
+    background: #b91c1c;
+}
+
+.noticias-empty {
+    text-align: center;
+    color: #6b7280;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .noticias-container {
+        padding: 12px;
+    }
+
+    .noticias-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .noticia-actions {
+        justify-content: center;
+    }
+}

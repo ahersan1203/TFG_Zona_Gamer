@@ -1,0 +1,106 @@
+.admin-eventos-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.admin-eventos-container h2 {
+    text-align: center;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.admin-eventos-container p {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.admin-eventos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.admin-evento-card {
+    background: white;
+    border-radius: 14px;
+    padding: 15px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.admin-evento-card h3 {
+    margin: 0 0 8px 0;
+    color: #111827;
+}
+.admin-evento-card p {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.admin-evento-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+.admin-edit {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.admin-edit:hover {
+    background: #1d4ed8;
+}
+
+.admin-delete {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #dc2626;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.admin-delete:hover {
+    background: #b91c1c;
+}
+
+.admin-delete:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.admin-empty {
+    text-align: center;
+    color: #6b7280;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .admin-eventos-container {
+        padding: 12px;
+    }
+
+    .admin-evento-actions {
+        flex-direction: column;
+    }
+
+    .admin-edit,
+    .admin-delete {
+        width: 100%;
+        text-align: center;
+    }
+}

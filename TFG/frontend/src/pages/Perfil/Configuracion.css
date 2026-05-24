@@ -1,0 +1,92 @@
+.config-container {
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 25px;
+
+    background: white;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+
+    font-family: Arial, sans-serif;
+}
+
+/* TITULO */
+
+.config-container h2 {
+    margin-bottom: 20px;
+    color: #111827;
+    font-size: 22px;
+}
+
+/* FORMULARIO */
+
+.config-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* LABELS */
+
+.config-form label {
+    font-size: 14px;
+    color: #374151;
+    margin-top: 5px;
+}
+
+/* INPUTS */
+
+.config-form input {
+    padding: 10px 12px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.config-form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* BOTÓN */
+
+.btn-guardar {
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-guardar:hover {
+    background: #1d4ed8;
+}
+
+.btn-guardar:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .config-container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+}

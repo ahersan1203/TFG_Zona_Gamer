@@ -1,0 +1,96 @@
+.crear-publicacion-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.crear-publicacion-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.crear-publicacion-card h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #111827;
+    font-size: 32px;
+}
+
+.crear-publicacion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.crear-publicacion-form textarea {
+    width: 100%;
+    min-height: 180px;
+    resize: vertical;
+
+    padding: 15px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    box-sizing: border-box;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.crear-publicacion-form textarea:focus {
+    border-color: #1e66ff;
+    box-shadow: 0 0 0 3px rgba(30,102,255,.15);
+}
+
+.contador {
+    text-align: right;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.crear-publicacion-form button {
+    align-self: flex-end;
+
+    background: #1e66ff;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 22px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.crear-publicacion-form button:hover {
+    background: #1553d6;
+}
+
+@media (max-width: 768px) {
+
+    .crear-publicacion-container {
+        padding: 10px;
+    }
+
+    .crear-publicacion-card {
+        padding: 18px;
+    }
+
+    .crear-publicacion-card h1 {
+        font-size: 24px;
+    }
+
+    .crear-publicacion-form button {
+        width: 100%;
+    }
+}

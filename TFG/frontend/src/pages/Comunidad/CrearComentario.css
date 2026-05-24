@@ -1,0 +1,95 @@
+.crear-comentario-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.crear-comentario-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.crear-comentario-card h1 {
+    margin: 0 0 20px;
+    color: #111827;
+    font-size: 32px;
+}
+
+.crear-comentario-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.crear-comentario-form textarea {
+    width: 100%;
+    min-height: 140px;
+    resize: vertical;
+
+    padding: 15px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    box-sizing: border-box;
+    outline: none;
+
+    transition: .2s;
+}
+
+.crear-comentario-form textarea:focus {
+    border-color: #1e66ff;
+    box-shadow: 0 0 0 3px rgba(30,102,255,.15);
+}
+
+.contador {
+    text-align: right;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.crear-comentario-form button {
+    align-self: flex-end;
+
+    background: #1e66ff;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 22px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.crear-comentario-form button:hover {
+    background: #1553d6;
+}
+
+@media (max-width: 768px) {
+
+    .crear-comentario-container {
+        padding: 10px;
+    }
+
+    .crear-comentario-card {
+        padding: 18px;
+    }
+
+    .crear-comentario-card h1 {
+        font-size: 24px;
+    }
+
+    .crear-comentario-form button {
+        width: 100%;
+    }
+}

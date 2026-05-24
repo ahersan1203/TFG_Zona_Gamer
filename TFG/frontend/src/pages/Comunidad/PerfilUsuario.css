@@ -1,0 +1,98 @@
+.perfil-usuario-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.perfil-header {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.perfil-publicaciones-titulo {
+    margin: 0;
+    color: #111827;
+}
+
+.perfil-header h1 {
+    margin: 0;
+    color: #111827;
+}
+
+.perfil-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.perfil-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.admin-btn {
+    background: #dc2626;
+}
+
+.perfil-publicaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.post-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.post-card p {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* 🔥 BOTONES A LA DERECHA */
+.post-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    min-width: 110px;
+    text-align: center;
+}
+
+.edit-btn {
+    background: #2563eb;
+}
+
+.delete-btn {
+    background: #dc2626;
+}
+
+.empty-state {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}

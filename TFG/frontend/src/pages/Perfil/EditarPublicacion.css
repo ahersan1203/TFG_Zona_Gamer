@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+.editar-publicacion-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.editar-publicacion-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.editar-publicacion-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.editar-publicacion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.editar-publicacion-form textarea {
+    width: 100%;
+    min-height: 160px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+    transition: 0.2s;
+}
+
+.editar-publicacion-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+}
+
+.editar-publicacion-form button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.editar-publicacion-form button:hover {
+    background: #1e4fd6;
+}
+
+.editar-publicacion-loading {
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .editar-publicacion-container {
+        padding: 12px;
+        margin: 20px auto;
+    }
+
+    .editar-publicacion-card {
+        padding: 18px;
+    }
+}

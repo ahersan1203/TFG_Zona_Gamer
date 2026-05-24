@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+.noticia-edit-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.noticia-edit-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.noticia-edit-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+.noticia-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.noticia-edit-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.noticia-edit-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.noticia-edit-form input,
+.noticia-edit-form textarea,
+.noticia-edit-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.noticia-edit-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.noticia-edit-form input:focus,
+.noticia-edit-form textarea:focus,
+.noticia-edit-form select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+}
+
+.noticia-edit-form button {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.noticia-edit-form button:hover {
+    background: #1e4fd6;
+}
+
+.noticia-edit-form button:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+}
+
+.noticia-edit-error {
+    color: #dc2626;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.noticia-edit-loading {
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .noticia-edit-container {
+        padding: 12px;
+        margin: 20px auto;
+    }
+
+    .noticia-edit-card {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,98 @@
+.evento-show-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.evento-show-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.evento-show-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.evento-show-text {
+    font-size: 15px;
+    color: #374151;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.evento-show-label {
+    font-weight: 600;
+    color: #111827;
+}
+
+.evento-show-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.evento-show-btn {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.evento-show-edit {
+    background: #2563eb;
+    color: white;
+}
+
+.evento-show-edit:hover {
+    background: #1e4fd6;
+}
+
+.evento-show-delete {
+    background: #dc2626;
+    color: white;
+}
+
+.evento-show-delete:hover {
+    background: #b91c1c;
+}
+
+.evento-show-back {
+    margin-top: 15px;
+    display: inline-block;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.evento-show-back:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .evento-show-container {
+        padding: 12px;
+        margin: 20px auto;
+    }
+
+    .evento-show-card {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .evento-show-title {
+        font-size: 22px;
+    }
+
+    .evento-show-actions {
+        justify-content: center;
+    }
+}
