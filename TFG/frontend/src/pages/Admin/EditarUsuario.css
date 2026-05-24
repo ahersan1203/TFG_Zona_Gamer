@@ -1,0 +1,82 @@
+.edit-user-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    font-family: Arial, sans-serif;
+}
+.edit-user-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1e66ff;
+    font-weight: bold;
+}
+.edit-user-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.edit-user-container label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+.edit-user-container input,
+.edit-user-container select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+    background: #f9fafb;
+}
+
+.edit-user-container input:focus,
+.edit-user-container select:focus {
+    border-color: #1e66ff;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(30,102,255,0.15);
+}
+.edit-user-container button {
+    margin-top: 10px;
+    padding: 12px;
+    background: #1e66ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.edit-user-container button:hover {
+    background: #0f4fe0;
+}
+
+.edit-user-container h2.loading {
+    text-align: center;
+    color: #666;
+}
+@media (max-width: 768px) {
+
+    .edit-user-container {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .edit-user-container h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .edit-user-container button {
+        width: 100%;
+    }
+}

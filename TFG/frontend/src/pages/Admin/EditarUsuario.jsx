@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../../api";
+import "./EditarUsuario.css";   
 
 export default function EditarUsuario() {
 
@@ -21,13 +22,14 @@ export default function EditarUsuario() {
 
     const cargarUsuario = async () => {
         try {
+            const response = await api.get(`/admin/usuario/${id}`);
 
-            const response = await api.get(`/usuarios/${id}`);
+            const usuario = response.data.usuario;
 
-            console.log("Usuario:", response.data);
-
-            // Si Laravel devuelve { data: usuario }
-            const usuario = response.data.data || response.data;
+            if (!usuario) {
+                alert("Usuario no encontrado");
+                return;
+            }
 
             setForm({
                 nombre: usuario.nombre || usuario.name || "",
@@ -47,7 +49,6 @@ export default function EditarUsuario() {
         e.preventDefault();
 
         try {
-
             await api.put(`/usuarios/${id}`, {
                 nombre: form.nombre,
                 email: form.email,
@@ -55,14 +56,13 @@ export default function EditarUsuario() {
             });
 
             alert("Usuario actualizado correctamente");
-
             navigate("/admin");
 
         } catch (error) {
             console.error("Error al actualizar:", error);
 
-            if (error.response?.data?.errors) {
-                console.log(error.response.data.errors);
+            if (error.response?.data) {
+                console.log("ERROR BACKEND:", error.response.data);
             }
 
             alert("Error al actualizar usuario");
@@ -82,15 +82,11 @@ export default function EditarUsuario() {
 
                 <div>
                     <label>Nombre</label>
-
                     <input
                         type="text"
                         value={form.nombre}
                         onChange={(e) =>
-                            setForm({
-                                ...form,
-                                nombre: e.target.value
-                            })
+                            setForm({ ...form, nombre: e.target.value })
                         }
                         required
                     />
@@ -98,15 +94,11 @@ export default function EditarUsuario() {
 
                 <div>
                     <label>Email</label>
-
                     <input
                         type="email"
                         value={form.email}
                         onChange={(e) =>
-                            setForm({
-                                ...form,
-                                email: e.target.value
-                            })
+                            setForm({ ...form, email: e.target.value })
                         }
                         required
                     />
@@ -114,14 +106,10 @@ export default function EditarUsuario() {
 
                 <div>
                     <label>Rol</label>
-
                     <select
                         value={form.rol_id}
                         onChange={(e) =>
-                            setForm({
-                                ...form,
-                                rol_id: e.target.value
-                            })
+                            setForm({ ...form, rol_id: e.target.value })
                         }
                     >
                         <option value="">Selecciona un rol</option>
@@ -129,8 +117,6 @@ export default function EditarUsuario() {
                         <option value="2">Usuario</option>
                     </select>
                 </div>
-
-                <br />
 
                 <button type="submit">
                     Guardar cambios

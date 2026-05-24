@@ -86,7 +86,7 @@ export default function Register() {
 
                     <div className="register-links">
                         <p>
-                            ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>
+                            ¿Ya tienes cuenta? <Link to="/">Inicia sesión</Link>
                         </p>
                     </div>
 

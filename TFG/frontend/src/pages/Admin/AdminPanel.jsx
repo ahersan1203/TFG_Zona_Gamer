@@ -65,7 +65,7 @@ export default function AdminPanel() {
 
         try {
 
-            await api.delete(`/usuarios/${id}`);
+            await api.delete(`/admin/usuario/${id}`);
 
             setData(prev => ({
                 ...prev,

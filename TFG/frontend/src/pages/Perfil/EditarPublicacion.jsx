@@ -6,6 +6,7 @@ import "./EditarPublicacion.css";
 export default function EditarPublicacion() {
     const { id } = useParams();
     const navigate = useNavigate();
+    const user = JSON.parse(localStorage.getItem("user"));
 
     const [contenido, setContenido] = useState("");
     const [loading, setLoading] = useState(true);

@@ -77,7 +77,7 @@ class AdminController extends Controller
         ]);
 
         $user->update([
-            'nombre' => $request->nombre,
+            'name' => $request->nombre,
             'email' => $request->email,
             'rol_id' => $request->rol_id
         ]);
@@ -88,10 +88,16 @@ class AdminController extends Controller
     }
     public function apiShowUsuario($id)
     {
-        $usuario = User::findOrFail($id);
+        $usuario = User::find($id);
+
+        if (!$usuario) {
+            return response()->json([
+                'message' => 'Usuario no encontrado'
+            ], 404);
+        }
 
         return response()->json([
-            'data' => $usuario
+            'usuario' => $usuario
         ]);
     }
 }
