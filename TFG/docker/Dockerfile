@@ -15,3 +15,5 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/html
 
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
+
+CMD ["sh", "-c", "php artisan migrate --force --seed && apache2-foreground"]
