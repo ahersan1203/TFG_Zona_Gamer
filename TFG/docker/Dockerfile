@@ -13,6 +13,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
+# Copiar archivos del proyecto al contenedor
+COPY  . .
 
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
 
