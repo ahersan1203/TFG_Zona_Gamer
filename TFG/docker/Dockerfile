@@ -12,7 +12,7 @@ RUN a2enmod rewrite
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Establecer directorio de trabajo
-WORKDIR /var/www/html
+WORKDIR /var/www/html/backend
 # Copiar archivos del proyecto al contenedor
 COPY  . .
 
