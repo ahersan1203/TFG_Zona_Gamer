@@ -93,5 +93,11 @@ class User extends Authenticatable
     public function mensajesRecibidos(){
         return $this->hasMany(Mensaje::class, 'receptor_id');
     }
-
+    
+    protected function password(): Attribute
+    {
+        return Attribute::make(
+            set: fn($value) => $value ? bcrypt($value) : null,
+        );
+    }
 }
