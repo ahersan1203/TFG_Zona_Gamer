@@ -3,3 +3,4 @@ Figma: https://www.figma.com/design/rRW0pcXw84CDD8NxnwMF9o/Sin-t%C3%ADtulo?node-
 Fidelidad alta: https://www.figma.com/design/rRW0pcXw84CDD8NxnwMF9o/Sin-t%C3%ADtulo?node-id=6-1679&t=VxQtbweTCx2soaZB-0
 Video frontend: https://youtu.be/oXUjuHXcoKE
 Video Backend: https://youtu.be/TqAOfr-pxmg
+URL PUBLICA: https://tfg-zona-gamer-o9uj.vercel.app/
