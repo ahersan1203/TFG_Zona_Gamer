@@ -29,7 +29,7 @@ class SeguidorSeeder extends Seeder
         ];
 
         foreach ($seguidores as $seguidor) {
-            Seguidor::create($seguidor);
+            Seguidor::firstOrCreate($seguidor);
         }
     }
 }
