@@ -16,8 +16,8 @@ class JuegoSeeder extends Seeder
     public function run(): void
     {
         $juegos = [
-            ['nombre' => 'Fortnite', 'desarrollador' => 'Epic Games', 'genero' => 'Battle Royale', 'Plataforma' => 'PC, PS, Xbox'],
-            ['nombre' => 'League of Legends', 'desarrollador' => 'Riot Games', 'genero' => 'MOBA', 'Plataforma' => 'PC'],
+            ['nombre' => 'Fortnite', 'desarrollador' => 'Epic Games', 'genero' => 'Battle Royale', 'plataforma' => 'PC, PS, Xbox'],
+            ['nombre' => 'League of Legends', 'desarrollador' => 'Riot Games', 'genero' => 'MOBA', 'plataforma' => 'PC'],
         ];
 
         foreach ($juegos as $juego) {
