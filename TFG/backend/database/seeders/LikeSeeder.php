@@ -21,7 +21,7 @@ class LikeSeeder extends Seeder
         ];
 
         foreach ($likes as $like) {
-            Like::create($like);
+            Like::firstOrCreate($like);
         }
     }
 }

@@ -33,7 +33,7 @@ class PublicacionSeeder extends Seeder
     ];
 
     foreach ($publicaciones as $publicacion) {
-        Publicacion::create($publicacion);
+        Publicacion::firstOrCreate($publicacion);
     }
     }
 }

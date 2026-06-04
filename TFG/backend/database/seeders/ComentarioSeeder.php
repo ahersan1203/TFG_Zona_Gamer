@@ -21,7 +21,7 @@ class ComentarioSeeder extends Seeder
         ];
 
         foreach ($comentarios as $comentario) {
-            Comentario::create($comentario);
+            Comentario::firstOrCreate($comentario);
         }
     }
 }

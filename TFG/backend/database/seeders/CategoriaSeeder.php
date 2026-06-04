@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
     {
         $categorias = ['Acción', 'Aventura', 'Multijugador', 'Competitivo', 'Cooperativo', 'Indie', 'RPG', 'Simulación', 'Deportes', 'Estrategia'];
         foreach ($categorias as $categoria) {
-            Categoria::create(['nombre' => $categoria, 'descripcion' => 'Descripción de la categoría ' . $categoria]);
+            Categoria::firstOrCreate(['nombre' => $categoria, 'descripcion' => 'Descripción de la categoría ' . $categoria]);
         }
     }
 }

@@ -33,7 +33,7 @@ class EventoSeeder extends Seeder
         ];
 
         foreach ($eventos as $evento) {
-            Evento::create($evento);
+            Evento::firstOrCreate($evento);
         }
     }
 }

@@ -21,7 +21,7 @@ class JuegoSeeder extends Seeder
         ];
 
         foreach ($juegos as $juego) {
-            Juego::create($juego);
+            Juego::firstOrCreate($juego);
         }
     }
 }

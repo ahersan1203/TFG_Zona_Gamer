@@ -31,7 +31,7 @@ class UserSeeder extends Seeder
         ];
 
         foreach ($usuarios as $usuario) {
-            User::create($usuario);
+            User::firstOrCreate($usuario);
         }
     }
 }

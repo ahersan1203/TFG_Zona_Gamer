@@ -21,7 +21,7 @@ class NoticiaSeeder extends Seeder
         ];
 
         foreach ($noticias as $noticia) {
-            Noticia::create($noticia);
+            Noticia::firstOrCreate($noticia);
         }
     }
 }
