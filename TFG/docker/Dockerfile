@@ -1,23 +1,20 @@
 FROM php:8.2-apache
 
-# Instalar herramientas y extensiones necesarias
-RUN apt-get update && apt-get install -y unzip git libzip-dev && \
-    docker-php-ext-install pdo pdo_mysql zip && \
-    docker-php-ext-enable pdo_mysql
+RUN apt-get update && apt-get install -y unzip git libzip-dev libpq-dev && \
+    docker-php-ext-install pdo pdo_mysql pdo_pgsql zip && \
+    docker-php-ext-enable pdo_mysql pdo_pgsql
 
-# Habilitar mod_rewrite de Apache
 RUN a2enmod rewrite
 
-# Instalar Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Establecer directorio de trabajo
 WORKDIR /var/www/html
 
-# Copiar archivos del proyecto al contenedor
 COPY TFG/backend/ .
 
-# Instalar dependencias de PHP
+ENV APP_ENV=production
+ENV APP_KEY=base64:placeholder==
+
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
