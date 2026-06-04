@@ -18,4 +18,8 @@ COPY  TFG/backend/ .
 
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
 
-CMD ["apache2-foreground"]
+COPY start.sh ./start.sh
+RUN chmod +x /start.sh
+CMD [ "./start.sh"]
+
+
