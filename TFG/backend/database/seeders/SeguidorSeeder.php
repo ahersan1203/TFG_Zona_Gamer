@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Seguidor;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -10,26 +11,21 @@ class SeguidorSeeder extends Seeder
 {
     use WithoutModelEvents;
 
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        $seguidores = [
-            [
-                'usuario_id' => 2,
-                'usuario_seguido_id' => 1,
-                'estado' => 'aceptado'
-            ],
-            [
-                'usuario_id' => 1,
-                'usuario_seguido_id' => 2,
-                'estado' => 'aceptado'
-            ],
-        ];
+        $juan = User::where('email', 'juan@email.com')->first();
+        $admin = User::where('email', 'admin@email.com')->first();
 
-        foreach ($seguidores as $seguidor) {
-            Seguidor::firstOrCreate($seguidor);
-        }
+        if (!$juan || !$admin) return;
+
+        Seguidor::firstOrCreate(
+            ['usuario_id' => $juan->id, 'usuario_seguido_id' => $admin->id],
+            ['estado' => 'aceptado']
+        );
+
+        Seguidor::firstOrCreate(
+            ['usuario_id' => $admin->id, 'usuario_seguido_id' => $juan->id],
+            ['estado' => 'aceptado']
+        );
     }
 }
