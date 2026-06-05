@@ -29,7 +29,7 @@ export default function MainLayout() {
                 <Link to="/eventos">Eventos</Link>
                 <Link to="/noticias">Noticias</Link>
 
-                <Link to={`/comunidad/perfil/${user?.id}`}>
+                <Link to={`/perfil`}>
                     Perfil
                 </Link>
 
@@ -38,7 +38,7 @@ export default function MainLayout() {
                 </button>
 
             </nav>
-
+        
 
             <main className="main-content">
                 <Outlet />

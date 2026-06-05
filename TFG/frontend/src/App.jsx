@@ -54,17 +54,18 @@ function App() {
           
           {/* COMUNIDAD */}
           <Route path="/comunidad" element={<ComunidadLayout />}>
-            <Route index element={<Comunidad />} />
-            <Route path="usuarios" element={<UsuariosLista />} />
-            <Route path="solicitudes" element={<Solicitudes />} />
-            <Route path="crear" element={<CrearPublicacion />} />
-            <Route path="publicacion/:id/comentario" element={<CrearComentario />} />
-            <Route path="perfil/:id" element={<PerfilUsuarios />} />
-            <Route path="chat/:id" element={<Chat />} />
-            <Route path="amigos" element={<Amigos />} />
-            <Route path="publicacion/editar/:id" element={<EditarPublicacion />} />
-            <Route path="comentario/editar/:id" element={<EditarComentario />} />
+          <Route index element={<Comunidad />} />
+          <Route path="usuarios" element={<UsuariosLista />} />
+          <Route path="solicitudes" element={<Solicitudes />} />
+          <Route path="crear" element={<CrearPublicacion />} />
+          <Route path="publicacion/:id/comentario" element={<CrearComentario />} />
+          <Route path="chat/:id" element={<Chat />} />
+          <Route path="amigos" element={<Amigos />} />
+          <Route path="publicacion/editar/:id" element={<EditarPublicacion />} />
+          <Route path="comentario/editar/:id" element={<EditarComentario />} />
+          <Route path="/comunidad/perfil/:id" element={<PerfilUsuarios />} />
           </Route>
+          
 
           {/* PERFIL */}
           <Route path="/perfil" element={<Perfil />} />
