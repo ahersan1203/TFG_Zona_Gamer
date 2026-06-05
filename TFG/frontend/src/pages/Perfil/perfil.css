@@ -1,0 +1,136 @@
+.perfil-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ 
+.perfil-header {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+ 
+.perfil-header h1 {
+    margin: 0 0 4px 0;
+    color: #111827;
+}
+ 
+.perfil-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+ 
+.perfil-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+ 
+.perfil-btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+ 
+.admin-btn {
+    background: #dc2626;
+}
+ 
+.perfil-seccion-titulo {
+    margin: 0 0 12px 0;
+    color: #111827;
+}
+ 
+.perfil-seccion {
+    margin-bottom: 24px;
+}
+ 
+.perfil-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+ 
+.post-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+ 
+.post-card p {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    color: #111827;
+}
+ 
+.post-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 15px;
+}
+ 
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    min-width: 110px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+ 
+.edit-btn {
+    background: #2563eb;
+}
+ 
+.delete-btn {
+    background: #dc2626;
+}
+ 
+.empty-state {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    color: #6b7280;
+}
+ 
+@media (max-width: 600px) {
+    .perfil-container {
+        padding: 12px;
+    }
+ 
+    .perfil-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+ 
+    .perfil-btn {
+        width: 100%;
+    }
+ 
+    .post-actions {
+        flex-direction: column;
+    }
+ 
+    .edit-btn,
+    .delete-btn {
+        width: 100%;
+        min-width: unset;
+    }
+}
