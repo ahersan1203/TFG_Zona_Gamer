@@ -49,6 +49,7 @@ class ComunidadController extends Controller
             'usuario_id' => auth()->id(),
             'contenido' => $request->contenido,
             'fecha' => now(),
+            'tipo' => 'post',
         ]);
 
         return response()->json([
