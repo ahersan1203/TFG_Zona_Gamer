@@ -19,7 +19,10 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
 
-RUN printf '#!/bin/sh\nphp artisan migrate:fresh --force\nphp artisan db:seed --force\napache2-foreground\n' > /start.sh && \
+RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions bootstrap/cache && \
+    chmod -R 775 storage bootstrap/cache
+
+RUN printf '#!/bin/sh\nchmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache\nphp artisan migrate:fresh --force\nphp artisan db:seed --force\napache2-foreground\n' > /start.sh && \
     chmod +x /start.sh
 
 CMD ["/start.sh"]
