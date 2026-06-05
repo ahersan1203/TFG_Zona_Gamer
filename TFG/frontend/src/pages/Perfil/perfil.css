@@ -1,28 +1,31 @@
+/* CONTENEDOR PRINCIPAL */
 .perfil-container {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
     padding: 20px;
 }
- 
+
+/* HEADER DEL PERFIL */
 .perfil-header {
     background: white;
     padding: 20px;
     border-radius: 12px;
     margin-bottom: 20px;
+    text-align: center;
 }
- 
+
 .perfil-header h1 {
-    margin: 0 0 4px 0;
+    margin: 0;
     color: #111827;
 }
- 
+
 .perfil-header p {
-    margin: 0;
+    margin-top: 8px;
     color: #6b7280;
-    font-size: 0.95rem;
 }
- 
+
+/* BOTONES */
 .perfil-botones {
     display: flex;
     gap: 15px;
@@ -30,7 +33,7 @@
     flex-wrap: wrap;
     margin-top: 20px;
 }
- 
+
 .perfil-btn {
     padding: 10px 16px;
     border: none;
@@ -38,51 +41,60 @@
     background: #2563eb;
     color: white;
     cursor: pointer;
-    font-size: 0.95rem;
+    transition: 0.2s;
 }
- 
+
+.perfil-btn:hover {
+    opacity: 0.9;
+}
+
 .admin-btn {
     background: #dc2626;
 }
- 
-.perfil-seccion-titulo {
-    margin: 0 0 12px 0;
-    color: #111827;
-}
- 
+
+/* SECCIONES */
 .perfil-seccion {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
- 
+
+.perfil-seccion-titulo {
+    margin-bottom: 15px;
+    color: #111827;
+    font-size: 1.4rem;
+}
+
+/* LISTAS */
 .perfil-lista {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
- 
+
+/* TARJETAS */
 .post-card {
     background: white;
     padding: 16px;
     border-radius: 12px;
     text-align: left;
-    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
- 
+
 .post-card p {
     margin: 0;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     word-break: break-word;
-    color: #111827;
+    color: #374151;
 }
- 
+
+/* BOTONES DE ACCIONES */
 .post-actions {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
     margin-top: 15px;
 }
- 
+
 .edit-btn,
 .delete-btn {
     border: none;
@@ -92,45 +104,44 @@
     color: white;
     min-width: 110px;
     text-align: center;
-    font-size: 0.9rem;
+    transition: 0.2s;
 }
- 
+
 .edit-btn {
     background: #2563eb;
 }
- 
+
 .delete-btn {
     background: #dc2626;
 }
- 
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.9;
+}
+
+/* ESTADO VACÍO */
 .empty-state {
     background: white;
     padding: 20px;
     border-radius: 12px;
+    text-align: center;
     color: #6b7280;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
- 
-@media (max-width: 600px) {
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
     .perfil-container {
-        padding: 12px;
+        padding: 15px;
     }
- 
-    .perfil-botones {
-        flex-direction: column;
-        align-items: stretch;
-    }
- 
-    .perfil-btn {
-        width: 100%;
-    }
- 
+
     .post-actions {
         flex-direction: column;
     }
- 
+
     .edit-btn,
     .delete-btn {
         width: 100%;
-        min-width: unset;
     }
 }

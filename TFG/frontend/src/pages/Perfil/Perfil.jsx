@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../../api";
-import "./Perfil.css";
+import "./perfil.css";
 
 export default function Perfil() {
     const [user, setUser] = useState(null);
